@@ -9,3 +9,8 @@ updates:
     directory: "/lecture-recording-manager" # Location of package manifests
     schedule:
       interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/lecture-recording-manager/ClientApp"
+    schedule:
+      interval: "weekly"
