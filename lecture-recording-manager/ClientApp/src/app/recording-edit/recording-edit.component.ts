@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LectureService } from '../services/lecture.service';
 import { Recording } from '../shared/recording';
@@ -10,11 +10,11 @@ import { Recording } from '../shared/recording';
   styleUrls: ['./recording-edit.component.scss']
 })
 export class RecordingEditComponent implements OnInit {
-  form: FormGroup;
+  form: UntypedFormGroup;
   recording: Recording;
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private router: Router,
     private route: ActivatedRoute,
     private lectureService: LectureService) {

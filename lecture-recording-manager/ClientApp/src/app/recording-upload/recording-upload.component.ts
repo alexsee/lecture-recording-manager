@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NzUploadFile } from 'ng-zorro-antd/upload';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { environment } from '../../environments/environment';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { LectureService } from '../services/lecture.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -19,7 +19,7 @@ export class RecordingUploadComponent implements OnInit {
   public fileList: NzUploadFile[] = []
   public uploadUrl: string = environment.apiUrl + '/api/recording/upload';
 
-  public form: FormGroup;
+  public form: UntypedFormGroup;
   public uploading = false;
 
   public lecture: Lecture;
@@ -27,7 +27,7 @@ export class RecordingUploadComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private notifications: NzNotificationService,
     private lectureService: LectureService) {
     this.form = this.fb.group({

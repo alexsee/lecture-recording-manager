@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { LectureService } from '../services/lecture.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Recording } from '../shared/recording';
@@ -12,13 +12,13 @@ import { Lecture } from '../shared/lecture';
   styleUrls: ['./recording-add.component.scss']
 })
 export class RecordingAddComponent implements OnInit {
-  public form: FormGroup;
+  public form: UntypedFormGroup;
   public lecture: Lecture;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private notifications: NzNotificationService,
     private lectureService: LectureService
   ) {

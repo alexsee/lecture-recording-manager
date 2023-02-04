@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Lecture } from '../shared/lecture';
 
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Semester } from '../shared/semester';
 import { SemesterService } from '../services/semester.service';
 import { LectureService } from '../services/lecture.service';
@@ -13,14 +13,14 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./lecture-create-edit.component.scss']
 })
 export class LectureCreateEditComponent implements OnInit {
-  form: FormGroup;
+  form: UntypedFormGroup;
   lecture: Lecture;
 
   semesters: Semester[] = [];
   actionType: string;
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private router: Router,
     private route: ActivatedRoute,
     private lectureService: LectureService,
