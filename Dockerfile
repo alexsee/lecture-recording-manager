@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
 RUN apt-get update && \
 	apt-get install -y wget && \
 	apt-get install -y gnupg2 && \
-	wget -qO- https://deb.nodesource.com/setup_14.x | bash - && \
+	wget -qO- https://deb.nodesource.com/setup_18.x | bash - && \
 	apt-get install -y build-essential nodejs
 
 WORKDIR /app
