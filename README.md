@@ -19,14 +19,14 @@ Additionally, the system runs within a docker container for easier maintainance 
 ## Requirements
 
 * PostgreSQL Database for storing the recording meta data
-* dotnet 6.0 SDK (https://dotnet.microsoft.com/) for compiling
+* dotnet 7.0 SDK (https://dotnet.microsoft.com/) for compiling
 * (only on unix) ```tesseract-ocr``` package
 
 ## Development
 
 ### Setup
 
-1. Install the .NET 6.0 SDK.
+1. Install the .NET 7.0 SDK.
 
 2. Clone the git repository:
 
